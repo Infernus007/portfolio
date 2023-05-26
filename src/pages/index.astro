@@ -12,16 +12,16 @@ const navitems = [{name : "Home" , href : "#here"}  ,{ name :"Projects" , href :
 ---
 
 <Layout title="Welcome to my portfolio.">
-	<Navbar brand="Infernus" items={navitems} logo="../public/logo.png"/> 
+	<Navbar brand="Infernus" items={navitems} logo="/logo.png"/> 
  <Hero
     preTitleTxt="hello!"
     title="Full-Stack Developer"
     postTitleTxt="Design Chameleon: Adapting, Innovating, and Inspiring as a Full-Stack Artist"
     btnText="Get CV"
-    image="../../public/skull-img.webp"
+    image="/skull-img.webp"
   />
   <CardLayout cardInfo={jsonData}/>
-  <Footer image="../../footerimage.svg" text="Let's collaborate on your next project. Get in touch with me to bring your ideas to life"></Footer>
+  <Footer image="/footerimage.svg" text="Let's collaborate on your next project. Get in touch with me to bring your ideas to life"></Footer>
   <!-- <TechnologiesLayout slot="technologies"/> -->
 </Layout>
 
