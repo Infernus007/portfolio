@@ -1,0 +1,99 @@
+---
+
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/skull-img.webp" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-purple-500 overflow-x-hidden">
+		<slot slot="navbar"></slot>
+		<main   class="rounded relative" > 
+
+		<slot name="hero"></slot>
+<slot name="proj"></slot>
+<slot name="front"></slot>
+</main>
+
+		<!-- <slot name="technologies"></slot> -->
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		--clr-secondary:#181D27; 
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	}
+
+
+
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+
+	
+</style>
+
+<script>
+	// Helper function to add classes to navigation items
+function setActiveNavItem(navItem:any) {
+  navItem.classList.add('active', 'border-b-white', 'border-b-2');
+}
+
+// Helper function to remove classes from navigation items
+function resetActiveNavItems() {
+  var navItems = document.querySelectorAll('.navigation li');
+  navItems.forEach(function(item) {
+    item.classList.remove('active', 'border-b-white', 'border-b-2');
+  });
+}
+
+// Intersection Observer callback function
+function handleIntersection(entries:any, observer:any) {
+  entries.forEach(function(entry:any) {
+    if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+      resetActiveNavItems();
+
+      if (entry.target.id === 'here') {
+        setActiveNavItem(document.querySelector('.navigation li:first-child'));
+      } else if (entry.target.id === 'proj') {
+        setActiveNavItem(document.querySelector('.navigation li:nth-child(2)'));
+      } else if (entry.target.id === 'footer') {
+        setActiveNavItem(document.querySelector('.navigation li:last-child'));
+      }
+    }
+  });
+}
+
+// Create the Intersection Observer instance
+var options = {
+  threshold: 0.5 // Intersection threshold set to 50%
+};
+
+var observer = new IntersectionObserver(handleIntersection, options);
+
+// Observe the sections
+var sections = document.querySelectorAll('#here, #proj, #footer');
+sections.forEach(function(section) {
+  observer.observe(section);
+});
+
+</script>

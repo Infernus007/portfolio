@@ -1,0 +1,202 @@
+---
+export interface Props {
+    preTitleTxt : string;
+    title : string;
+    postTitleTxt : string;
+    btnText : string;
+    image : string;
+    
+}
+
+const {preTitleTxt , title , postTitleTxt , btnText , image} = Astro.props;
+
+import 'boxicons/css/boxicons.min.css';
+
+---
+
+    <div id="here" class="hero mb-10 text-center container relative flex justify-start items-center">
+    <div class="ms-24   w-[65ch]">
+        <p class="font-thin text-2xl">{preTitleTxt}</p>
+<h1 class="text-3xl ">
+  I'm Infernus007 , a 
+  <span class="magic">
+    <span class="magic-star">
+      <svg viewBox="0 0 512 512">
+      <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+      </svg>
+    </span>
+    <span class="magic-star">
+      <svg viewBox="0 0 512 512">
+      <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+      </svg>
+    </span>
+    <span class="magic-star">
+      <svg viewBox="0 0 512 512">
+      <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+      </svg>
+    </span>
+    <span class="magic-text text-4xl">{title}</span>
+  </span>
+  and a student.
+</h1>
+        <p class="text-2xl font-thin">{postTitleTxt}</p>
+        <div class="mt-2">
+          <i class='bx bxl-react text-blue-500 ' ></i>
+          <i class='bx bxl-php text-cyan-800 '></i>
+          <i class='bx bxl-django text-gray-800' ></i>
+          <i class='bx bxl-typescript text-blue-700' ></i>
+          <i class='bx bxl-tailwind-css text-teal-300' ></i>
+          <i class='bx bxl-mongodb text-green-400' ></i>
+        </div>
+        <button class="mt-3 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+          Get Resume
+        </button>
+    </div>
+
+    <div class="absolute -end-16 top-[-15rem] w-[70%] z-10">
+        <img src={image}/>
+    </div>
+</div>
+
+<!-- <div class="banner absolute bg-teal-400 w-1/3  h-[100%] top-0 end-0 ">
+</div> -->
+
+
+<style>
+.bx{
+  font-size: 24px;
+border-radius: 100%;
+padding: 0.5em;
+background-color: white;
+transition: all ease-in 500ms;
+}
+.bx:hover{
+  scale: 1.3;
+  transform: translateY(-0.5em);
+}
+
+.banner {
+  /* background: linear-gradient(135deg, #2a00ff, #00c6ff, #ff00aa); */
+
+}
+
+   .hero{
+height: calc(100vh - 2.5rem);
+   }
+
+   :root {  
+  --purple: rgb(123, 31, 162);
+  --violet: #F43F5E;
+  --pink: #C62368;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes scale {
+  from, to {
+    transform: scale(0);
+  }
+  
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+
+h1 {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-size: clamp(10em, 11vw, 11em);
+  font-weight: 400;
+  margin: 0px;
+  max-width: 35ch;
+}
+
+h1 > .magic {
+  display: inline-block;
+  position: relative;
+}
+
+h1 > .magic > .magic-star {
+  --size: clamp(20px, 1.5vw, 30px);
+  animation: scale 700ms ease forwards;
+  display: block;
+  height: var(--size);
+  left: var(--star-left);
+  position: absolute;
+  top: var(--star-top);
+  width: var(--size);
+}
+
+h1 > .magic > .magic-star > svg {
+  animation: rotate 1000ms linear infinite;
+  display: block;
+  opacity: 0.7;
+}
+
+h1 > .magic > .magic-star > svg > path {
+  fill: var(--violet);
+}
+
+h1 > .magic > .magic-text {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--purple),
+    var(--violet),
+    var(--pink),
+    var(--purple)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+
+</style>
+
+ 
+<script>
+    let index = 0,
+    interval = 1000;
+
+const rand = (min:number, max:number) => 
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
+const animate = (star: HTMLSpanElement) => {
+  star.style.setProperty("--star-left", `${rand(-10, 100)}%`);
+  star.style.setProperty("--star-top", `${rand(-40, 80)}%`);
+
+  star.style.animation = "none";
+  star.offsetHeight;
+  star.style.animation = "";
+}
+
+for(const star of document.getElementsByClassName("magic-star")) {
+  setTimeout(() => {
+    animate(star as HTMLSpanElement);
+    
+    setInterval(() => animate(star as HTMLSpanElement), 1000);
+  }, index++ * (interval / 3))
+}
+
+</script>
