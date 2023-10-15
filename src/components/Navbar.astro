@@ -1,41 +1,57 @@
 ---
-
-type navitems = {name : string , href : string}
-export interface Props{
-    items : Array<navitems>;
-    brand : string;
-    logo : string;
+type navitems = { name: string; href: string };
+export interface Props {
+  items: Array<navitems>;
+  brand: string;
+  logo: string;
 }
 
-const {items , brand , logo } = Astro.props;
+const { items, brand, logo } = Astro.props;
 ---
-<header slot="navbar"  class="h-10 fixed z-20   ms-10" >
-<nav class="flex gap-20">
-<div class="flex gap-1">
-    <img alt="brand-logo" style={{height:"25px" , width : "25px"}} src={logo}/>
-    <span class="text-lg">{brand}</span>
-</div>
-<ul class="flex gap-6 navigation">
-    {items.map((e) => <li class="nav-item"><a href={e.href} class="block text-lg nav-link py-2 pl-3 pr-4 text-gray-900 rounded  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent " aria-current="page">{e.name}</a></li>)}
-</ul>
-</nav>
-</header>
 
-<script>
+<header slot="navbar" class="h-10 fixed z-20 ms-10">
+  <nav class="flex gap-20">
+    <div class="flex gap-1">
+      <img
+        alt="brand-logo"
+        style={{ height: "25px", width: "25px" }}
+        src={logo}
+      />
+      <span class="text-lg">{brand}</span>
+    </div>
+    <ul class="flex gap-6 navigation">
+      {
+        items.map((e) => (
+          <li class="nav-item">
+            <a
+              href={e.href}
+              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:text-blue-500"
+              aria-current="page"
+            >
+              {e.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
 
-//@ts-ignore
-document.querySelector('.nav-item').classList.add('active', 'border-b-2', 'border-b-white')
+  <script>
+    //@ts-ignore
+    document
+      .querySelector(".nav-item")
+      .classList.add("active", "border-b-2", "border-b-white");
 
-let navitems: NodeList = document.querySelectorAll('.nav-item');
+    let navitems: NodeList = document.querySelectorAll(".nav-item");
 
-Array.from(navitems).forEach((e: any) => {
-  e.addEventListener('click', function() {
-    Array.from(navitems).forEach((innerele: any) => {
-      innerele.classList.remove('active','border-b-white','border-b-2');
+    Array.from(navitems).forEach((e: any) => {
+      e.addEventListener("click", function () {
+        Array.from(navitems).forEach((innerele: any) => {
+          innerele.classList.remove("active", "border-b-white", "border-b-2");
+        });
+
+        e.classList.add("active", "border-b-white", "border-b-2");
+      });
     });
-
-    e.classList.add('active', 'border-b-white', 'border-b-2');
-  });
-});
-
-</script>
+  </script>
+</header>

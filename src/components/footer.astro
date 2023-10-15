@@ -1,26 +1,41 @@
 ---
-export interface Props{
-    text : string;
-    image : string;
+export interface Props {
+  text: string;
+  image: string;
 }
 
-const {text , image} = Astro.props;
+const { text, image } = Astro.props;
 ---
-<div class="" style={{backgroundImage :" url('/stacked-layer.svg')"}}>
-<div id="footer" class="flex z-10 justify-center items-center h-screen flex-col gap-3">
-<img src={image} class="w-[20%]"></img>
-  <p>{text}</p>
-<button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
-    Get in touch
-  </button>
 
+<div class="" style={{ backgroundImage: " url('/stacked-layer.svg')" }}>
+  <div
+    id="footer"
+    class="flex z-10 justify-center items-center h-screen flex-col gap-3"
+  >
+    <img src={image} class="w-[20%]" />
+  </div>
+  <p>{text}</p>
+  <a href="https://www.linkedin.com/in/jash-naik-7612b8162/">
+    <button
+      class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+    >
+      Get in touch
+    </button>
+  </a>
   <div class="wave">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        class="shape-fill"></path>
     </svg>
   </div>
 </div>
-  
+
 <!-- <div class="w-full absolute bottom-0 " slot="footer-wave">
 	<svg class=""  viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
 	  <g clip-path="url(#clip0_23_2)">
@@ -32,9 +47,6 @@ const {text , image} = Astro.props;
 	  </g>
 	  </svg>
   </div> -->
-</div>
-
-
 
 <style>
   .wave {
@@ -44,32 +56,27 @@ const {text , image} = Astro.props;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-}
+  }
 
-.wave svg {
+  .wave svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 182px;
-}
+  }
 
-.wave .shape-fill {
-    fill: #F43F5E;
-}
-
-
+  .wave .shape-fill {
+    fill: #f43f5e;
+  }
 </style>
 
 <script>
+  //@ts-ignore
+  let paths: SVGPathElement[] = document.querySelectorAll(".animated-svg path");
 
-
-//@ts-ignore
-let paths:SVGPathElement[] = document.querySelectorAll('.animated-svg path');
-
-paths.forEach((e:SVGPathElement) => {
-  console.log(e.getTotalLength());
-  e.style.strokeDasharray = e.getTotalLength() as unknown  as string;
-  e.style.strokeDashoffset = e.getTotalLength() as unknown as string;
-})
-
+  paths.forEach((e: SVGPathElement) => {
+    console.log(e.getTotalLength());
+    e.style.strokeDasharray = e.getTotalLength() as unknown as string;
+    e.style.strokeDashoffset = e.getTotalLength() as unknown as string;
+  });
 </script>
