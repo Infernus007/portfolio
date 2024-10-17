@@ -1,0 +1,9 @@
+body {
+  margin: 0px;
+  overflow-x: hidden;
+  overflow-y: scroll; /* Hide scrollbars */
+}
+
+html {
+  scroll-behavior: smooth;
+}
