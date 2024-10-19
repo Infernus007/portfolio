@@ -9,46 +9,43 @@ import Rounded from "../../common/RoundedButton";
 import Link from "next/link";
 
 const projects = [
-  {
-    title: "Fully-Strapped",
-    src: "fullystrapped.png",
-    description: "Frontend",
-    href: "https://fully-strapped.vercel.app/",
-    color: "#000000",
-  },
-
-  {
-    title: "AsQ",
-    src: "asq.png",
-    description: "Frontend & Backend",
-    href: "https://drive.google.com/file/d/1gmO9OX3ILS3E-fEzchkvJeAyShRmVnGX/view",
-    color: "#706D63",
-  },
+  
   {
     title: "Portfolio",
     src: "portfolio.png",
     description: "Frontend",
-    href: "#",
-
+    href: "https://jash-naik.vercel.app/",
     color: "#8C8C8C",
   },
   {
-    title: "Lazy Blogs",
-    src: "blogs.png",
-    description: "Frontend & Backend",
-
-    href: "https://lazy-blogs.vercel.app/",
-
+    title: "Jash's Blogs",
+    src: "jash-blog.png",
+    description: "A platform for sharing my knowledge and ideas",
+    href: "https://jash-naik-blogs.vercel.app/",
     color: "#EFE8D3",
   },
   {
-    title: "Rest Api",
-    src: "rest.png",
-    description: "Backend",
-
-    href: "https://nextjs-typescript-starter-seven.vercel.app/",
+    title: "Algobrain AI landing page",
+    src: "algobrainai.png",
+    description: "Landing page for Algobrain AI a growing AI startup located in Surat Gujarat, India",
+    href: "https://algobrainai.com/",
+    color: "#EFE8D3",
+  }, 
+  {
+    title: "Algobrain AI whatsapp client",
+    src: "algobrainai-whatsapp.png",
+    description: "Ultimate tool for managing WhatsApp communications.",
+    href: "https://wa.algobrainai.com/",
+    color: "#000000",
+  },
+  {
+    title: "AsQ",
+    src: "asq.png",
+    description: "Full stack web app for a question and answer platform made with php , python , Flask and mysql",
+    href: "https://drive.google.com/file/d/1gmO9OX3ILS3E-fEzchkvJeAyShRmVnGX/view",
     color: "#706D63",
   },
+ 
 ];
 
 const scaleAnimation = {
