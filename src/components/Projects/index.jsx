@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Portfolio",
     src: "portfolio.png",
-    description: "Frontend",
+    description: "My portfolio",
     href: "https://jash-naik.vercel.app/",
     color: "#8C8C8C",
   },
@@ -33,7 +33,7 @@ const projects = [
   }, 
   {
     title: "Algobrain AI whatsapp client",
-    src: "algobrainai-whatsapp.png",
+    src: "wa-algobrainai.png",
     description: "Ultimate tool for managing WhatsApp communications.",
     href: "https://wa.algobrainai.com/",
     color: "#000000",
