@@ -78,6 +78,8 @@ export default function RootLayout({ children }) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://jash-naik.vercel.app" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#334BD3" />
       </head>
       <body className={inter.className}>
         <Header />

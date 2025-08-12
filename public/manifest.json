@@ -1,0 +1,19 @@
+{
+  "name": "Jash Naik - Cybersecurity Engineer",
+  "short_name": "Jash Naik",
+  "description": "Cybersecurity engineer and cloud developer specializing in secure, scalable digital infrastructure",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#334BD3",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["portfolio", "cybersecurity", "technology"],
+  "lang": "en"
+}

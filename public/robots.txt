@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://jash-naik.vercel.app/sitemap.xml
+
+# Block access to admin/private areas (if any)
+Disallow: /api/
+Disallow: /_next/static/
