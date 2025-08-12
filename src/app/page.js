@@ -7,7 +7,7 @@ import Contact from "../components/Contact";
 
 function Home() {
   return (
-    <main className={styles.main}>
+    <main className={styles.main} role="main">
       <Landing />
       <Description />
       <Projects />

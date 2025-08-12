@@ -9,43 +9,41 @@ import Rounded from "../../common/RoundedButton";
 import Link from "next/link";
 
 const projects = [
-  
   {
-    title: "Portfolio",
+    title: "Cybersecurity Portfolio",
     src: "portfolio.png",
-    description: "My portfolio",
+    description: "My comprehensive cybersecurity portfolio showcasing security solutions and cloud implementations",
     href: "https://jash-naik.vercel.app/",
     color: "#8C8C8C",
   },
   {
-    title: "Jash's Blogs",
+    title: "Security Blog Platform",
     src: "jash-blog.png",
-    description: "A platform for sharing my knowledge and ideas",
+    description: "A secure platform for sharing cybersecurity knowledge, threat analysis, and security best practices",
     href: "https://jash-naik-blogs.vercel.app/",
     color: "#EFE8D3",
   },
   {
-    title: "Algobrain AI landing page",
+    title: "AI Security Landing Page",
     src: "algobrainai.png",
-    description: "Landing page for Algobrain AI a growing AI startup located in Surat Gujarat, India",
+    description: "Secure, responsive landing page for AI startup with implemented security headers and threat protection",
     href: "https://algobrainai.com/",
     color: "#EFE8D3",
   }, 
   {
-    title: "Algobrain AI whatsapp client",
+    title: "Secure WhatsApp Client",
     src: "wa-algobrainai.png",
-    description: "Ultimate tool for managing WhatsApp communications.",
+    description: "End-to-end encrypted WhatsApp client with advanced security features and threat detection",
     href: "https://wa.algobrainai.com/",
     color: "#000000",
   },
   {
-    title: "AsQ",
+    title: "Secure Q&A Platform",
     src: "asq.png",
-    description: "Full stack web app for a question and answer platform made with php , python , Flask and mysql",
+    description: "Full-stack secure question platform with SQL injection protection, input validation, and encrypted data storage",
     href: "https://drive.google.com/file/d/1gmO9OX3ILS3E-fEzchkvJeAyShRmVnGX/view",
     color: "#706D63",
   },
- 
 ];
 
 const scaleAnimation = {
@@ -122,14 +120,16 @@ export default function Home() {
   };
 
   return (
-    <main
+    <section
       id="work"
       onMouseMove={(e) => {
         moveItems(e.clientX, e.clientY);
       }}
       className={styles.projects}
+      aria-labelledby="projects-heading"
     >
       <div className={styles.body}>
+        <h2 id="projects-heading" className="sr-only">Featured Security Projects</h2>
         {projects.map((project, index) => {
           return (
             <Project
@@ -193,6 +193,6 @@ export default function Home() {
           View
         </motion.div>
       </>
-    </main>
+    </section>
   );
 }

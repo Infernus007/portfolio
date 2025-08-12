@@ -1,4 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Jash Naik - Cybersecurity Engineer & Cloud Developer Portfolio
+
+A modern, responsive portfolio website showcasing cybersecurity projects, cloud implementations, and security solutions.
+
+## 🚀 Features
+
+- **Modern Design**: Clean, minimalist interface with smooth animations using Framer Motion
+- **SEO Optimized**: Comprehensive meta tags, structured data, and semantic HTML
+- **Accessibility First**: ARIA labels, semantic elements, and keyboard navigation
+- **Performance Focused**: Optimized images, lazy loading, and efficient animations
+- **Responsive**: Mobile-first design that works on all devices
+- **Interactive Elements**: Custom cursor effects and smooth scroll animations
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 13.4.10
+- **Styling**: SCSS modules for scoped styling
+- **Animations**: Framer Motion for smooth page transitions
+- **Performance**: GSAP for complex animations
+- **Scroll**: Locomotive Scroll for smooth scrolling experience
+- **Font**: Inter from Google Fonts
 
 ## Getting Started
 

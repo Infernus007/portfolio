@@ -8,7 +8,7 @@
     cursor: pointer;
     transition: all 0.2s;
 
-    h2{
+    h2, h3{
         font-size: 60px;
         margin: 0px;
         font-weight: 400;
@@ -27,7 +27,7 @@
     &:hover{
         opacity: 0.5;
 
-        h2{
+        h2, h3{
             transform: translateX(-10px);
         }
 

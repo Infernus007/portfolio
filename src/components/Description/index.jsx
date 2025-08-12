@@ -6,7 +6,7 @@ import { slideUp, opacity } from "./animation";
 import Rounded from "../../common/RoundedButton";
 function Index() {
   const phrase =
-    "Aspiring Full-Stack developer creating creative solutions for problems based on my experience";
+    "Aspiring cybersecurity professional dedicated to developing innovative solutions for evolving digital threats.";
   const description = useRef(null);
   const isInView = useInView(description);
   return (
@@ -29,7 +29,7 @@ function Index() {
           })}
         </p>
         <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>
-          Transforming lines of code into user experiences, front to back.
+          Turning lines of code into secure and resilient digital systems, end to end.
         </motion.p>
         <div data-scroll data-scroll-speed={0.1}>
           <Rounded className={styles.button}>

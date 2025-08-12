@@ -10,7 +10,7 @@ export default function index({
   href,
 }) {
   return (
-    <div
+    <article
       onMouseEnter={(e) => {
         manageModal(true, index, e.clientX, e.clientY);
       }}
@@ -23,10 +23,12 @@ export default function index({
         href={href}
         style={{ textDecoration: "none", color: "black", width: "100%" }}
         target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`View ${title} project - ${description}`}
       >
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <p>{description}</p>
       </a>
-    </div>
+    </article>
   );
 }
